@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.box {
+  font: 10px sans-serif;
+}
+
+.box line,
+.box rect,
+.box circle {
+  fill: steelblue;
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.box .center {
+  stroke-dasharray: 3,3;
+}
+
+.box .outlier {
+  fill: none;
+  stroke: #000;
+}
+
+.axis {
+  font: 12px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+</style>
+<body>
+<div id = "chartContainer">
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://dimplejs.org/dist/dimple.v2.2.0.min.js"></script>
+<script src="d3.v3.min.js"></script>
+<script src="box.js"></script>
+<script>
+var labels = true; // show the text labels beside individual boxplots?
+
+//var margin = {top: 30, right: 50, bottom: 180, left: 50};
+
+var margin = {top: 30, right: 50, bottom: 70, left: 50};
+var  width = 800 - margin.left - margin.right;
+var height = 800 - margin.top - margin.bottom;
+
+var min = Infinity,
+    max = -Infinity;
+
+var description_1 = "As the ProsperRating goes from A to HR, the number of chargedoff and defaulted loans become higher. The credit grading system seems to be a good indicator whether a loan is likely to be completed, chargedoff, or defaulted.";
+
+var heading = "HEADING";
+
+// parse in the data
+ d3.csv("prosperLoansRemNA.csv", function(cat) {
+                // console.log(cat);
+
+                var data = [];
+                data[0] = [];
+                data[1] = [];
+                data[2] = [];
+                data[3] = [];
+                data[4] = [];
+                data[5] = [];
+                data[6] = [];
+                data[7] = [];
+                data[8] = [];
+                data[9] = [];
+                data[10] = [];
+                data[11] = [];
+
+                // add more rows if your csv file has more columns
+
+                // add here the header of the csv file
+                data[0][0] = "Cancelled";
+                data[1][0] = "Chargedoff";
+                data[2][0] = "Completed";
+                data[3][0] = "Current";
+                data[4][0] = "Defaulted";
+                data[5][0] = "FinalPaymentInProgress";
+                data[6][0] = "Past Due (1-15 days)"
+                data[7][0] = "Past Due (16-30 days)"
+                data[8][0] = "Past Due (31-60 days)"
+                data[9][0] = "Past Due (61-90 days)"
+                data[10][0] = "Past Due (91-120 days)"
+                data[11][0] = "Past Due (>120 days)"
+
+                // add more rows if your csv file has more columns
+
+                data[0][1] = [];
+                data[1][1] = [];
+                data[2][1] = [];
+                data[3][1] = [];
+                data[4][1] = [];
+                data[5][1] = [];
+                data[6][1] = [];
+                data[7][1] = [];
+                data[8][1] = [];
+                data[9][1] = [];
+                data[10][1] = [];
+                data[11][1] = [];
+                cat.forEach(function(x) {
+                    if (x.LoanStatus == "Cancelled") {
+                        var v1 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    } else if (x.LoanStatus == "Chargedoff") {
+                        var v2 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    } else if (x.LoanStatus == "Completed") {
+                        var v3 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    } else if (x.LoanStatus == "Current") {
+                        var v4 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    } else if (x.LoanStatus == "Defaulted") {
+                        var v5 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    } else if (x.LoanStatus == "FinalPaymentInProgress") {
+                        var v6 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    } else if (x.LoanStatus == "Past Due (1-15 days)") {
+                        var v7 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    } else if (x.LoanStatus == "Past Due (16-30 days)") {
+                        var v8 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    } else if (x.LoanStatus == "Past Due (31-60 days)") {
+                        var v9 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    } else if (x.LoanStatus == "Past Due (61-90 days)") {
+                        var v10 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    } else if (x.LoanStatus == "Past Due (91-120 days)") {
+                        var v11 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    } else  {
+                        var v12 = (Math.floor(x.DebtToIncomeRatioPercent))/100;
+                    }
+
+                    // add more variables if your csv file has more columns
+                    if (v1) {
+                        data[0][1].push(v1);
+                        if (v1 > max)
+                            max = v1;
+                        if (v1 < min)
+                            min = v1;
+                    }
+                    if (v2) {
+                        data[1][1].push(v2);
+                        if (v2 > max)
+                            max = v2;
+                        if (v2 < min)
+                            min = v2;
+                    }
+                    if (v3) {
+                        data[2][1].push(v3);
+                        if (v3 > max)
+                            max = v3;
+                        if (v3 < min)
+                            min = v3;
+                    }
+                    if (v4) {
+                        data[3][1].push(v4);
+                        if (v4 > max)
+                            max = v4;
+                        if (v4 < min)
+                            min = v4;
+                    }
+                    if (v5) {
+                        data[4][1].push(v5);
+                        if (v5 > max)
+                            max = v5;
+                        if (v5 < min)
+                            min = v5;
+                    }
+                    if (v6) {
+                        data[5][1].push(v6);
+                        if (v6 > max)
+                            max = v6;
+                        if (v6 < min)
+                            min = v6;
+                    }
+                    if (v7) {
+                        data[6][1].push(v7);
+                        if (v7 > max)
+                            max = v7;
+                        if (v7 < min)
+                            min = v7;
+                    }
+                    if (v8) {
+                        data[7][1].push(v8);
+                        if (v8 > max)
+                            max = v8;
+                        if (v8 < min)
+                            min = v8;
+                    }
+                    if (v9) {
+                        data[8][1].push(v9);
+                        if (v9 > max)
+                            max = v9;
+                        if (v9 < min)
+                            min = v9;
+                    }
+                    if (v10) {
+                        data[9][1].push(v10);
+                        if (v10 > max)
+                            max = v10;
+                        if (v10 < min)
+                            min = v10;
+                    }
+                    if (v11) {
+                        data[10][1].push(v11);
+                        if (v11 > max)
+                            max = v11;
+                        if (v11 < min)
+                            min = v11;
+                    }
+                    if (v12) {
+                        data[11][1].push(v12);
+                        if (v12 > max)
+                            max = v12;
+                        if (v12 < min)
+                            min = v12;
+                    }
+                    // add more rows if your csv file has more columns
+                });
+                    //debugger;
+
+
+            var chart = d3.box()
+        .whiskers(iqr(1.5))
+        .height(height)
+        .domain([min, 0.5])
+        .showLabels(labels);
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .attr("class", "box")
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // the x-axis
+    var x = d3.scale.ordinal()
+        .domain( data.map(function(d) { console.log(d); return d[0] } ) )
+        .rangeRoundBands([0 , width], 0.7, 0.3);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+    // the y-axis
+    var y = d3.scale.linear()
+        .domain([min, 0.5])
+        .range([height + margin.top, 0 + margin.top]);
+
+
+
+    var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+    // draw the boxplots
+    svg.selectAll(".box")
+      .data(data)
+      .enter().append("g")
+        .attr("transform", function(d) { return "translate(" +  x(d[0])  + "," + margin.top + ")"; } )
+      .call(chart.width(x.rangeBand()));
+
+
+    // add a title
+    svg.append("text")
+        .attr("x", (width / 2))
+        .attr("y", 0 + (margin.top / 2))
+        .attr("text-anchor", "middle")
+        .style("font-size", "18px")
+        //.style("text-decoration", "underline")
+        .text("DebtToIncomeRatio by Loan Status");
+
+     // draw y axis
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text") // and text1
+          .attr("transform", "rotate(-90)")
+          .attr("y", 6)
+          .attr("dy", ".71em")
+          .style("text-anchor", "end")
+          .style("font-size", "16px")
+          .text("Debt To Income Ratio");
+
+    // draw x axis
+    svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + (height  + margin.top + 10) + ")")
+      .call(xAxis)
+      .selectAll("text")
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", function(d) {
+                return "rotate(-65)"
+                })
+      .append("text")             // text label for the x axis
+        .attr("x", (width / 2) )
+        .attr("y",  200)
+        .attr("dy", ".71em")
+        .style("text-anchor", "middle")
+        .style("font-size", "16px")
+        .text("Loan Status");
+
+        //create second chart
+         var svg2 = dimple.newSvg("#chartContainer", 590, 400);
+
+        d3.csv("summary1.csv", function (data){
+        var myChart = new dimple.chart(svg2, data);
+
+        var header = d3.select('body')
+                .append('h2')
+                .text(heading);
+
+        myChart.setBounds(60, 45, 510, 315)
+        myChart.addSeries("LoanStatus", dimple.plot.bar);
+        myChart.addLegend(200, 35, 380, 20, "right");
+        x2 = myChart.addCategoryAxis("x", ["ProsperRatingAlpha", "LoanStatus"]);
+        y2 = myChart.addMeasureAxis("y", "count");
+        x2.title = "Loan Status";
+        y2.title = "Number of Loans";
+
+        x2.addOrderRule(["A", "AA", "B", "C", "D", "E", "HR"]);
+        x2.addGroupOrderRule(["Chargedoff", "Completed", "Defaulted"])
+
+            myChart.draw();
+
+        //put title
+          svg2.append("text")
+        .attr("x", (width / 2))
+        .attr("y", 0 + (margin.top / 2))
+        .attr("text-anchor", "middle")
+        .style("font-size", "18px")
+        //.style("text-decoration", "underline")
+        .text("Loan Status per Prosper Rating");
+
+        var description = d3.select("body")
+            .append("p")
+                .html(description_1);
+
+        });
+});
+
+// Returns a function to compute the interquartile range.
+function iqr(k) {
+  return function(d, i) {
+    var q1 = d.quartiles[0],
+        q3 = d.quartiles[2],
+        iqr = (q3 - q1) * k,
+        i = -1,
+        j = d.length;
+    while (d[++i] < q1 - iqr);
+    while (d[--j] > q3 + iqr);
+    //debugger;
+    return [i, j];
+  };
+}
+
+</script>
+</div>
