@@ -23,5 +23,7 @@ http://dimplejs.org/examples_viewer.html?id=bars_vertical_grouped_stacked
 * Udacity's Discussion Forum
 
 https://discussions.udacity.com/t/creating-boxplot-using-d3-js/165568
+
 https://discussions.udacity.com/t/error-cannot-read-property--hascategories-of-null/167169/5
+
 https://discussions.udacity.com/t/x-axis-label-is-not-showing/167146/3
