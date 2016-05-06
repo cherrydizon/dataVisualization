@@ -9,6 +9,7 @@ For the second graph, since I am showing relationship between a continuous and c
 
 #Feedback
 ##Feedback1
+####from Luke Wicent Sy
 Regarding Credit Grading Feature,
 
 Your graph makes sense, and I believe that it is indeed a good indicator whether a loan is likely to be completed, chargedoff, or defaulted.
@@ -22,6 +23,7 @@ The median of Completed is indeed slightly lower than the other status. But you 
 Following your reasoning with the medians, DebtToIncomeRatio may be a good indicator to distinguish "Completed" from "Chargedoff" and "Defaulted", but not to distinguish "Chargedoff" from "Defaulted".
 
 ##Feedback2
+####from David Smith
 For your charts, I think the top one would better if you could show charged-off and delinquent (which, together, I call non-performing) as a percentage of the total number of loans. To me, showing the loan counts isn't as valuable as illustrating the riskiness of each credit grading. The higher the percentage of loans that go bad, the higher the risk.
 
 Below the second one, you state "loan status has a strong relationship with debt-to-income ratio." The chart as it is drawn doesn't illustrate that very dramatically. Instead, there are a lot of overlapping confidence intervals. Seems to me like you could just as easily say the opposite. You also state, "Loans that were completed has a lower Debt-to-income ratio median compared to chargedoff, defaulted
