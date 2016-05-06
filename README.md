@@ -12,15 +12,15 @@ For the second graph, since I am showing relationship between a continuous and c
 
 #Resources
 
-1. D3.js Boxplot with Axes and Labels
+* D3.js Boxplot with Axes and Labels
 
 http://bl.ocks.org/jensgrubert/7789216
 
-2. Vert Stacked Grouped Bar
+* Vert Stacked Grouped Bar
 
 http://dimplejs.org/examples_viewer.html?id=bars_vertical_grouped_stacked
 
-3. Udacity's Discussion Forum
+* Udacity's Discussion Forum
 
 https://discussions.udacity.com/t/creating-boxplot-using-d3-js/165568
 https://discussions.udacity.com/t/error-cannot-read-property--hascategories-of-null/167169/5
