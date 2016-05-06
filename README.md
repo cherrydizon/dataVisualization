@@ -1,4 +1,5 @@
 Summary
+
 I have used the data from Prosper Loans to show which factors can relate to whether a loan will be paid completely, chargedoff, defaulted or past due. 
 
 Design
@@ -9,14 +10,14 @@ For the second graph, since I am showing relationship between a continuous and c
 Feedback
 
 
-Resources
-1. D3.js Boxplot with Axes and Labels
+Resources__
+1. D3.js Boxplot with Axes and Labels__
 http://bl.ocks.org/jensgrubert/7789216
 
-2. Vert Stacked Grouped Bar
+2. Vert Stacked Grouped Bar__
 http://dimplejs.org/examples_viewer.html?id=bars_vertical_grouped_stacked
 
-3. Udacity's Discussion Forum
+3. Udacity's Discussion Forum__
 https://discussions.udacity.com/t/creating-boxplot-using-d3-js/165568
 https://discussions.udacity.com/t/error-cannot-read-property--hascategories-of-null/167169/5
 https://discussions.udacity.com/t/x-axis-label-is-not-showing/167146/3
