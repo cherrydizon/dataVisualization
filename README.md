@@ -67,7 +67,7 @@ What relationships do you notice?
 It is little confusing the way the categories in x-axis are order. i guess it is order in alphabetic starting from 'c' - Cancelled to pastdue. this will be better if you order something starts with loan completion and goes till pastdue i think that way it will be easy to visualize and find trend since the variation in mean of each category is very less.
 
 Is there something you don’t understand in the graphic?
-the first graph was awesome and did it part. The title in the second graph is over lapping with the graph. if your are using dumple.js to create title, i would suggest you not to use them instead add a paragraph just before the graph tag and give the title name that it will stay out of the graph and use <center> to center the title.
+the first graph was awesome and did it part. The title in the second graph is over lapping with the graph. if your are using dumple.js to create title, i would suggest you not to use them instead add a paragraph tags just before the graph tag and give the title name that it will stay out of the graph and use center tags to center the title.
 
 good job !!
 
@@ -88,3 +88,7 @@ https://discussions.udacity.com/t/creating-boxplot-using-d3-js/165568
 https://discussions.udacity.com/t/error-cannot-read-property--hascategories-of-null/167169/5
 
 https://discussions.udacity.com/t/x-axis-label-is-not-showing/167146/3
+
+*HTML Tutorial
+
+http://www.w3schools.com/html/default.asp
