@@ -1,14 +1,14 @@
 #Summary
 
-I have used the data from Prosper Loans to show which factors can relate to whether a loan is likely be paid successfully or not. My charts show that Credit Grading and Debt-to-income ratio are important factors when it comes to predicting the outcome of a loan.
+I have used the data from Prosper Loans to show which factors can relate to whether a loan is likely be paid successfully or not. My charts show that Credit Grading and Debt-to-income ratio are important factors when it comes to predicting the possible outcome of a loan.
 
 #Design
 ####Initial Design
 For my first graph, since I am showing relationship between two categorial variables (Loan Status and Credit Grading), a grouped bar chart seems to be a good choice. I showed the total number of loans per Loan Status grouped by the Credit Grading. I included a legend so that the reader can understand the trend of loan statuses per Credit Grading.
 
-For the second graph, since I am showing relationship between a continuous and categorical variables(Debt-to-income ratio and Loan Status), a boxplot is good in order to compate the medians and the trends per catogory (Loan Status).
+For the second graph, since I am showing relationship between a continuous and categorical variable(Debt-to-income ratio and Loan Status), a boxplot is good in order to compare the medians and the trends per catogory (Loan Status).
 
-Since I will be comparing amounts across loan statuses, I used planer as visual encodings for my two graphs.
+Since I will be comparing amounts across loan statuses, I used planar (x and y) as visual encodings for my two graphs.
 
 ####Changes After Getting Feedback
 1. For my first graph, in order to show a stronger trend, instead of the total number of loans as the y-axis, I used percentage per each Credit Grading.
