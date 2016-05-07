@@ -27,8 +27,49 @@ Following your reasoning with the medians, DebtToIncomeRatio may be a good indic
 For your charts, I think the top one would better if you could show charged-off and delinquent (which, together, I call non-performing) as a percentage of the total number of loans. To me, showing the loan counts isn't as valuable as illustrating the riskiness of each credit grading. The higher the percentage of loans that go bad, the higher the risk.
 
 Below the second one, you state "loan status has a strong relationship with debt-to-income ratio." The chart as it is drawn doesn't illustrate that very dramatically. Instead, there are a lot of overlapping confidence intervals. Seems to me like you could just as easily say the opposite. You also state, "Loans that were completed has a lower Debt-to-income ratio median compared to chargedoff, defaulted
-and past due loans." That's true, but if you did an ANOVA test or pair-wise student t-tests with those other statuses, would "completed" be statistically different than those others? So I'm not sure how I would fix this one, except to say I would either change the narrative to more accurately describe the data, or find a different relationship that is more dramatic and interesting.﻿
+and past due loans." That's true, but if you did an ANOVA test or pair-wise student t-tests with those other statuses, would "completed" be statistically different than those others? So I'm not sure how I would fix this one, except to say I would either change the narrative to more accurately describe the data, or find a different relationship that is more dramatic and interesting.
 
+##Feedback3
+####from laurent_319928
+You found an interesting topic!
+
+I would suggest the following:
+
+a/ Narrow the width of the html body otherwise the lines of the text are much too long.
+To paraphrase The Not So Short Introduction to LATEX 2
+The line length has to be short enough not to strain the eyes of the reader, while long enough to fill the page beautifully.
+
+b/ "which factors you should carefully check before you get a loan"
+shouldn't it be "before you request / ask for a loan" ? if you get a loan, it is already too late.
+
+c/ you made the first sentence bold, to emphasize it, I suppose; the next one, starting with "As the credit..." is not bold any longer, but the font size seems to be somewhat larger; this is counter-intuitive.
+
+d/ I would add some space between the first sentence and the first chart.
+
+e/ "The credit grading system": I would welcome a hyperlink for those wondering whether it is free, accessible from the net, ...
+
+f/ second chart: I would place the title above the chart and not in the chart.
+
+g/ "when it comes to predicting the performance of a loan"
+-> "when it comes to predicting the outcome of a loan" (might be a false alarm since I am not a native English speaker).
+
+##Feedback4
+####from karthik_403523
+good work @Cherry 
+
+What do you notice in the visualization?
+regardless of Credit Grading number of loan completed is high. which is good for investors.
+
+What questions do you have about the data?
+if i was provided with details on what is AA ,A, B means it will be each for me to relate but as of now they are just some random alphabets to me.
+
+What relationships do you notice?
+It is little confusing the way the categories in x-axis are order. i guess it is order in alphabetic starting from 'c' - Cancelled to pastdue. this will be better if you order something starts with loan completion and goes till pastdue i think that way it will be easy to visualize and find trend since the variation in mean of each category is very less.
+
+Is there something you don’t understand in the graphic?
+the first graph was awesome and did it part. The title in the second graph is over lapping with the graph. if your are using dumple.js to create title, i would suggest you not to use them instead add a paragraph just before the graph tag and give the title name that it will stay out of the graph and use <center> to center the title.
+
+good job !!
 
 #Resources
 
