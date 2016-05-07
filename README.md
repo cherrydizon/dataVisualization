@@ -15,7 +15,7 @@ Since I will be comparing amounts across loan statuses, I used planar (x and y) 
 2. For the second graph, I reduced the categories in my x-axis. This is to let my charts focus on loans that are already closed. Like what I initially did in my first graph, I just focused on completed, defaulted and chargedoff loans. 
 3. I edited the description in the first graph. I added an explanation about the credit grading.
 4. I edit the description in the second graph. My initial description wasn't really describing the data accurately. So I edited it and considered not just about the median but also the IQR.
-5. I adjusted the positioning of the texts. The width of my initial design was too wide so I reduced it.
+5. I adjusted the positioning of the texts. The width of my initial design was too wide so I reduced it. Also, the title of the second graph is overlapping with the graph so I adjusted the position.
 6. I added a link of Prosper Loans' website.
 7. I adjusted the size of the texts. Some texts were in bold but small so I made them bigger.
 
