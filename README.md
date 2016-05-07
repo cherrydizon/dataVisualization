@@ -9,7 +9,7 @@ For the second graph, since I am showing relationship between a continuous and c
 
 #Feedback
 ##Feedback1
-####from MS Computer Science student Luke Wicent Sy
+####from MS Computer Science student Luke Sy
 Regarding Credit Grading Feature,
 
 Your graph makes sense, and I believe that it is indeed a good indicator whether a loan is likely to be completed, chargedoff, or defaulted.
