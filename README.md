@@ -1,11 +1,21 @@
 #Summary
 
-I have used the data from Prosper Loans to show which factors can relate to whether a loan will be paid completely, chargedoff, defaulted or past due. 
+I have used the data from Prosper Loans to show which factors can relate to whether a loan is likely be paid successfully or not.
 
 #Design
-For my first graph, since I am showing relationship between two categorial variables (Loan Status and Credit Grading), a grouped bar chart seems to be a good choice. 
+####Initial Design
+For my first graph, since I am showing relationship between two categorial variables (Loan Status and Credit Grading), a grouped bar chart seems to be a good choice. I showed the total number of loans per Loan Status grouped by the Credit Grading.
 
 For the second graph, since I am showing relationship between a continuous and categorical variables(Debt-to-income ratio and Loan Status), a boxplot is good in order to compate the medians and the trends per catogory (Loan Status).
+
+####Changes After Getting Feedback
+1. For my first graph, in order to show a stronger trend, instead of the total number of loans as the y-axis, I used percentage per each Credit Grading.
+2. For the second graph, I reduced the categories in my x-axis. This is to let my charts focus on loans that are already closed. Like what I initially did in my first graph, I just focused on completed, defaulted and chargedoff loans. 
+3. I edited the description in the first graph. I added an explanation about the credit grading.
+4. I edit the description in the second graph. My initial description wasn't really describing the data accurately. So I edited it and considered not just about the median but also the IQR.
+5. I adjusted the positioning of the texts. The width of my initial design was too wide so I reduced it.
+6. I added a link of Prosper Loans' website.
+7. I adjusted the size of the texts. Some texts were in bold but small so I made them bigger.
 
 #Feedback
 ##Feedback1
