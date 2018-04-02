@@ -1,16 +1,16 @@
-#Summary
+# Summary
 
 I have used the data from Prosper Loans to show which factors can relate to whether a loan is likely be paid successfully or not. My charts show that Credit Grading and Debt-to-income ratio are important factors when it comes to predicting the possible outcome of a loan.
 
-#Design
-####Initial Design
+# Design
+#### Initial Design
 For my first graph, since I am showing relationship between two categorial variables (Loan Status and Credit Grading), a grouped bar chart seems to be a good choice. I showed the total number of loans per Loan Status grouped by the Credit Grading. I included a legend so that the reader can understand the trend of loan statuses per Credit Grading.
 
 For the second graph, since I am showing relationship between a continuous and categorical variable(Debt-to-income ratio and Loan Status), a boxplot is good in order to compare the medians and the trends per catogory (Loan Status).
 
 Since I will be comparing amounts across loan statuses, I used planar (x and y) as visual encodings for my two graphs.
 
-####Changes After Getting Feedback
+#### Changes After Getting Feedback
 1. For my first graph, in order to show a stronger trend, instead of the total number of loans as the y-axis, I used percentage per each Credit Grading.
 2. For the second graph, I reduced the categories in my x-axis. This is to let my charts focus on loans that are already closed. Like what I initially did in my first graph, I just focused on completed, defaulted and chargedoff loans. 
 3. I edited the description in the first graph. I added an explanation about the credit grading.
@@ -19,9 +19,9 @@ Since I will be comparing amounts across loan statuses, I used planar (x and y) 
 6. I added a link of Prosper Loans' website.
 7. I adjusted the size of the texts. Some texts were in bold but small so I made them bigger.
 
-#Feedback
-##Feedback1
-####from MS Computer Science student Luke Sy
+# Feedback
+## Feedback1
+#### from MS Computer Science student Luke Sy
 Regarding Credit Grading Feature,
 
 Your graph makes sense, and I believe that it is indeed a good indicator whether a loan is likely to be completed, chargedoff, or defaulted.
@@ -34,15 +34,15 @@ Cancelled has a lower DebtToIncomeRatio than Completed. Is that relevant to the 
 The median of Completed is indeed slightly lower than the other status. But you can still see that there are a lot of intersects with the range of DebtToIncomeRatio. Without knowing how each status is distributed (gaussian? normal? high concentration above? etc), its really hard to tell. 
 Following your reasoning with the medians, DebtToIncomeRatio may be a good indicator to distinguish "Completed" from "Chargedoff" and "Defaulted", but not to distinguish "Chargedoff" from "Defaulted".
 
-##Feedback2
-####from fellow Udacity student David Smith
+## Feedback2
+#### from fellow Udacity student David Smith
 For your charts, I think the top one would better if you could show charged-off and delinquent (which, together, I call non-performing) as a percentage of the total number of loans. To me, showing the loan counts isn't as valuable as illustrating the riskiness of each credit grading. The higher the percentage of loans that go bad, the higher the risk.
 
 Below the second one, you state "loan status has a strong relationship with debt-to-income ratio." The chart as it is drawn doesn't illustrate that very dramatically. Instead, there are a lot of overlapping confidence intervals. Seems to me like you could just as easily say the opposite. You also state, "Loans that were completed has a lower Debt-to-income ratio median compared to chargedoff, defaulted
 and past due loans." That's true, but if you did an ANOVA test or pair-wise student t-tests with those other statuses, would "completed" be statistically different than those others? So I'm not sure how I would fix this one, except to say I would either change the narrative to more accurately describe the data, or find a different relationship that is more dramatic and interesting.
 
-##Feedback3
-####from fellow Udacity student laurent_319928
+## Feedback3
+#### from fellow Udacity student laurent_319928
 You found an interesting topic!
 
 I would suggest the following:
@@ -65,8 +65,8 @@ f/ second chart: I would place the title above the chart and not in the chart.
 g/ "when it comes to predicting the performance of a loan"
 -> "when it comes to predicting the outcome of a loan" (might be a false alarm since I am not a native English speaker).
 
-##Feedback4
-####from fellow Udacity student karthik_403523
+## Feedback4
+#### from fellow Udacity student karthik_403523
 good work @Cherry 
 
 What do you notice in the visualization?
@@ -83,7 +83,7 @@ the first graph was awesome and did it part. The title in the second graph is ov
 
 good job !!
 
-#Resources
+# Resources
 
 * D3.js Boxplot with Axes and Labels
 
@@ -101,6 +101,6 @@ https://discussions.udacity.com/t/error-cannot-read-property--hascategories-of-n
 
 https://discussions.udacity.com/t/x-axis-label-is-not-showing/167146/3
 
-*HTML Tutorial
+* HTML Tutorial
 
 http://www.w3schools.com/html/default.asp
